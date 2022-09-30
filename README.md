@@ -16,5 +16,5 @@ This project aims to provide pre-built python docker images with poetry in them.
 
 Naming convention is as follows:
 ```
-ghcr.io/shini4i/python-poetry:<python_version>-<poetry_version>
+ghcr.io/shini4i/python-poetry:<python_minor_version>-<poetry_version>
 ```
