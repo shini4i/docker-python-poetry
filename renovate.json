@@ -1,6 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "matchPaths": ["3.9/**"],
+      "matchDatasources": ["docker"],
+      "allowedVersions": "<3.10",
+      "additionalBranchPrefix": "3.9-",
+      "automerge": true
+    },
+    {
+      "matchPaths": ["3.10/**"],
+      "matchDatasources": ["docker"],
+      "allowedVersions": "<3.11",
+      "additionalBranchPrefix": "3.10-",
+      "automerge": true
+    }
   ]
 }
