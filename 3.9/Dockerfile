@@ -1,5 +1,5 @@
-FROM python:3.9.14-slim-bullseye
+FROM python:3.9.7-slim-bullseye
 
-ARG POETRY_VERSION
+ENV POETRY_VERSION=2.2.0
 
 RUN pip install --no-cache-dir poetry==$POETRY_VERSION
