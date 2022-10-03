@@ -1,5 +1,5 @@
-FROM python:3.10.7-slim-bullseye
+FROM python:3.10.3-slim-bullseye
 
-ARG POETRY_VERSION
+ENV POETRY_VERSION=1.1.15
 
 RUN pip install --no-cache-dir poetry==$POETRY_VERSION

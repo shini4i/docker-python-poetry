@@ -4,20 +4,28 @@
     "config:base",
     ":semanticCommits"
   ],
+  "regexManagers": [
+    {
+      "fileMatch": [".*/Dockerfile$"],
+      "matchStrings": ["ENV POETRY_VERSION=(?<currentValue>.*)"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "python-poetry/poetry"
+    }
+  ],
   "packageRules": [
     {
       "matchPaths": ["3.9/**"],
       "matchDatasources": ["docker"],
       "allowedVersions": "<3.10",
-      "additionalBranchPrefix": "3.9-",
-      "automerge": true
+      "additionalBranchPrefix": "3.9-"
     },
     {
       "matchPaths": ["3.10/**"],
       "matchDatasources": ["docker"],
       "allowedVersions": "<3.11",
-      "additionalBranchPrefix": "3.10-",
-      "automerge": true
+      "additionalBranchPrefix": "3.10-"
     }
-  ]
+  ],
+  "automerge": true,
+  "platformAutomerge": true
 }
