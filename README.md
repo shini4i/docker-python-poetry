@@ -25,3 +25,7 @@ Python version is the version without a patch number, e.g., `3.9`, and the poetr
 ## Supported versions
 
 Currently, the following python versions are supported: `3.8` `3.9` `3.10`
+
+### Available images
+<!-- table_start -->
+<!-- table_end -->
