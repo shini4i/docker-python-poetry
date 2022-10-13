@@ -3,18 +3,29 @@ name: Update Readme
 on:
   workflow_run:
     workflows:
-     - "Build and Publish docker images (python 3.8)"
-     - "Build and Publish docker images (python 3.9)"
-     - "Build and Publish docker images (python 3.10)"
+      - "Build and Publish docker images (python 3.8)"
+      - "Build and Publish docker images (python 3.9)"
+      - "Build and Publish docker images (python 3.10)"
     branches: [main]
     types:
       - completed
 
 jobs:
+  pre_job:
+    runs-on: ubuntu-latest
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@v5
+        with:
+          concurrent_skipping: 'outdated_runs'
+
   update-readme:
+    needs: pre_job
     name: Update Readme
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: needs.pre_job.outputs.should_skip != 'true'
 
     steps:
       - name: Checkout code
@@ -30,6 +41,7 @@ jobs:
       - run: python update-readme.py
 
       - uses: stefanzweifel/git-auto-commit-action@v4
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         with:
           commit_message: "docs(readme): update images table [skip ci]"
           file_pattern: "README.md"
