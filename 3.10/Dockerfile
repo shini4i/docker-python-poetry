@@ -1,4 +1,4 @@
-FROM python:3.10.7-slim-bullseye
+FROM python:3.10.8-slim-bullseye
 
 ENV POETRY_VERSION=1.2.2
 
