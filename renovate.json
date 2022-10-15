@@ -4,6 +4,9 @@
     "config:base",
     ":semanticCommits"
   ],
+  "ignorePaths": [
+    "requirements.txt"
+  ],
   "regexManagers": [
     {
       "fileMatch": [".*/Dockerfile$"],
