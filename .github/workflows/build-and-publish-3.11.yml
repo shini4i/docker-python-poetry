@@ -34,7 +34,7 @@ jobs:
         run: echo "POETRY_VERSION=$(grep POETRY_VERSION= 3.11/Dockerfile | awk -F'=' '{ print $2 }')" >> $GITHUB_ENV
 
       - name: Build image and push to GitHub Container Registry
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: "3.11"
           tags: |
