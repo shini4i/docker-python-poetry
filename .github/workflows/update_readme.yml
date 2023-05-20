@@ -20,7 +20,6 @@ jobs:
       - id: skip_check
         uses: fkirc/skip-duplicate-actions@v5
         with:
-          concurrent_skipping: 'outdated_runs'
           cancel_others: 'true'
 
   update-readme:
