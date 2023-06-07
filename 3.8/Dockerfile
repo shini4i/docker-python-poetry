@@ -1,4 +1,4 @@
-FROM python:3.8.16-slim-buster
+FROM python:3.8.17-slim-buster
 
 ENV POETRY_VERSION=1.5.1
 
