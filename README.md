@@ -5,7 +5,7 @@
 Docker images with python and poetry
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/shini4i/docker-python-poetry/update_readme.yml?branch=main&style=plastic)
-![Supported Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue?style=plastic)
+![Supported Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%203.12-blue?style=plastic)
 ![GitHub](https://img.shields.io/github/license/shini4i/python-poetry?style=plastic)
 
 </div>
@@ -24,7 +24,7 @@ Python version is the version without a patch number, e.g., `3.9`, and the poetr
 
 ## Supported versions
 
-Currently, the following python versions are supported: `3.8` `3.9` `3.10` `3.11`
+Currently, the following python versions are supported: `3.8` `3.9` `3.10` `3.11` `3.12`
 
 ### Available images
 <!-- table_start -->
