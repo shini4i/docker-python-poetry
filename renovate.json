@@ -39,6 +39,12 @@
       "matchDatasources": ["docker"],
       "allowedVersions": "<3.12",
       "additionalBranchPrefix": "3.11-"
+    },
+    {
+      "matchPaths": ["3.12/**"],
+      "matchDatasources": ["docker"],
+      "allowedVersions": "<3.13",
+      "additionalBranchPrefix": "3.12-"
     }
   ],
   "automerge": true,
