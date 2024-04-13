@@ -5,7 +5,7 @@
 Docker images with python and poetry
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/shini4i/docker-python-poetry/update_readme.yml?branch=main&style=plastic)
-![Supported Python Versions](https://img.shields.io/badge/3.10%20%7C%203.11%20%7C%203.12-blue?style=plastic)
+![Supported Python Versions](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue?style=plastic)
 ![GitHub](https://img.shields.io/github/license/shini4i/python-poetry?style=plastic)
 
 </div>
