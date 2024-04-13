@@ -3,8 +3,6 @@ name: Update Readme
 on:
   workflow_run:
     workflows:
-      - "Build and Publish docker images (python 3.8)"
-      - "Build and Publish docker images (python 3.9)"
       - "Build and Publish docker images (python 3.10)"
       - "Build and Publish docker images (python 3.11)"
       - "Build and Publish docker images (python 3.12)"
