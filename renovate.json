@@ -1,42 +1,59 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":semanticCommits"
   ],
   "ignorePaths": [
     "requirements.txt"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": [".*/Dockerfile$"],
-      "matchStrings": ["ENV POETRY_VERSION=(?<currentValue>.*)"],
+      "customType": "regex",
+      "fileMatch": [
+        ".*/Dockerfile$"
+      ],
+      "matchStrings": [
+        "ENV POETRY_VERSION=(?<currentValue>.*)"
+      ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "python-poetry/poetry"
     }
   ],
   "packageRules": [
     {
-      "matchPaths": ["3.10/**"],
-      "matchDatasources": ["docker"],
+      "matchFileNames": [
+        "3.10/**"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
       "allowedVersions": "<3.11",
       "additionalBranchPrefix": "3.10-"
     },
     {
-      "matchPaths": ["3.11/**"],
-      "matchDatasources": ["docker"],
+      "matchFileNames": [
+        "3.11/**"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
       "allowedVersions": "<3.12",
       "additionalBranchPrefix": "3.11-"
     },
     {
-      "matchPaths": ["3.12/**"],
-      "matchDatasources": ["docker"],
+      "matchFileNames": [
+        "3.12/**"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
       "allowedVersions": "<3.13",
       "additionalBranchPrefix": "3.12-"
     }
   ],
   "automerge": true,
-  "stabilityDays": 1,
+  "minimumReleaseAge": "1 day",
   "prCreation": "not-pending",
   "platformAutomerge": true
 }
