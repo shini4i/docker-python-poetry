@@ -10,8 +10,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        ".*/Dockerfile$"
+      "managerFilePatterns": [
+        "/.*/Dockerfile$/"
       ],
       "matchStrings": [
         "ENV POETRY_VERSION=(?<currentValue>.*)"
