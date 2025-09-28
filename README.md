@@ -30,7 +30,7 @@ Currently, the following python versions are supported: `3.10` `3.11` `3.12`
 <!-- table_start -->
 | Python Version |              Latest built image             |        Updated time       |
 |:--------------:|:-------------------------------------------:|:-------------------------:|
-|      3.12      |  ghcr.io/shini4i/python-poetry:3.12.6-1.8.5 | 2024-12-08 09:49:13 +0000 |
-|      3.11      |  ghcr.io/shini4i/python-poetry:3.11.4-1.8.5 | 2024-12-08 09:49:13 +0000 |
-|      3.10      | ghcr.io/shini4i/python-poetry:3.10.12-1.8.5 | 2024-12-08 09:49:13 +0000 |
+|      3.11      |  ghcr.io/shini4i/python-poetry:3.11.4-2.2.1 | 2025-09-28 12:01:31 +0000 |
+|      3.12      |  ghcr.io/shini4i/python-poetry:3.12.6-2.2.1 | 2025-09-28 12:01:31 +0000 |
+|      3.10      | ghcr.io/shini4i/python-poetry:3.10.12-2.2.1 | 2025-09-28 12:01:31 +0000 |
 <!-- table_end -->
